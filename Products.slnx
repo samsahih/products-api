@@ -1,3 +1,8 @@
 <Solution>
+  <Project Path="Products.Api.Tests/Products.Api.Tests.csproj" />
   <Project Path="Products.Api/Products.Api.csproj" />
+  <Project Path="client/client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
 </Solution>
