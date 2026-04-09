@@ -1,6 +1,27 @@
-@Products.Api_HostAddress = http://localhost:5295
+@Products.Api_HostAddress = https://localhost:7007
 
-GET {{Products.Api_HostAddress}}/weatherforecast/
+GET {{Products.Api_HostAddress}}/health
 Accept: application/json
+
+###
+
+GET {{Products.Api_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+GET {{Products.Api_HostAddress}}/api/products?colour=Red
+Accept: application/json
+
+###
+
+POST {{Products.Api_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Widget",
+  "color": "Red",
+  "price": 12.50
+}
 
 ###
