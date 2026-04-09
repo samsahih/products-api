@@ -1,21 +1,30 @@
 @Products.Api_HostAddress = https://localhost:7007
+@accessToken = paste-token-here
 
 GET {{Products.Api_HostAddress}}/health
 Accept: application/json
 
 ###
 
+POST {{Products.Api_HostAddress}}/api/auth/token
+Accept: application/json
+
+###
+
 GET {{Products.Api_HostAddress}}/api/products
+Authorization: Bearer {{accessToken}}
 Accept: application/json
 
 ###
 
 GET {{Products.Api_HostAddress}}/api/products?colour=Red
+Authorization: Bearer {{accessToken}}
 Accept: application/json
 
 ###
 
 POST {{Products.Api_HostAddress}}/api/products
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
